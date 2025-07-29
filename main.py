@@ -76,14 +76,17 @@ def main():
 
         if hit:
             lost_text = FONT.render("You Lost!", 1,"white")
-            WIN.bilt(lost_text,(WIDTH/2 - lost_text.get_width()/2, HEIGHT/2 - lost_text.get_height()/2))
+            WIN.blit(lost_text,(WIDTH/2 - lost_text.get_width()/2, HEIGHT/2 - lost_text.get_height()/2))
+            pygame.display.update()
+            pygame.time.delay(3000)
+            break
 
         draw(player, elapsed_time, stones)
+
+
 
     pygame.quit()
 
 if __name__ == "__main__":
     main()
-
-
-
+          
